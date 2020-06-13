@@ -179,7 +179,56 @@ git rebase <base>
 ```shellscript
 git remote add origin https://github.com/user/repo.git
 ```
-45) Fetches a specific branch, from the repo. Leave off <branch>to fetch all remote refs.
+45) Fetches a specific branch, from the repo. Leave off branch to fetch all remote refs.
 ```shellscript
-git remote add origin https://github.com/user/repo.git
+git fetch <remote> <branch>
+```
+46) To fetch the specified remote’s copy of current branch and immediately merge it into the local copy.
+```shellscript
+git pull <remote>
+```
+47)To push the branch to remote, along with necessary commits and objects. Creates named branch in the remote repo if it doesn’t exist.
+```shellscript
+git push
+<remote> <branch>
+```
+48 ) To Reset staging area to match most recent commit, but leave the working directory unchanged.
+```shellscript
+git reset
+```
+49 ) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
+```shellscript
+git reset --hard
+```
+50 ) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
+```shellscript
+git reset <commit>
+```
+51 ) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
+```shellscript
+git reset --hard <commit>
+```
+52)To Fetch the remote’s copy of current branch and rebases it into the local copy. Uses git rebase instead of merge to integrate the branches.
+```shellscript
+git pull --rebase <remote>
+```
+53) To Forces the git push even if it results in a non-fast-forward merge. Do not use the --force flag unless you’re absolutely sure you know what you’re doing.
+```shellscript
+git push <remote> --force
+```
+54) To push all of your local branches to the specified remote.
+```shellscript
+git push <remote> --all
+```
+55) Tags aren’t automatically pushed when you push a branch or use the --all flag. The --tags flag sends all of your local tags to the remote repo.
+```shellscript
+git push <remote> --tags
+```
+56) To Show difference between working directory and last commit.
+```shellscript
+git diff HEAD
+```
+57) To show difference between staged changes and last commit
+```shellscript
+git diff --cached
 ```
