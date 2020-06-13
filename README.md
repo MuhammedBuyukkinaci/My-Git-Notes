@@ -192,23 +192,23 @@ git pull <remote>
 git push
 <remote> <branch>
 ```
-48 ) To Reset staging area to match most recent commit, but leave the working directory unchanged.
+48) To Reset staging area to match most recent commit, but leave the working directory unchanged.
 ```shellscript
 git reset
 ```
-49 ) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
+49) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
 ```shellscript
 git reset --hard
 ```
-50 ) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
+50) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
 ```shellscript
 git reset <commit>
 ```
-51 ) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
+51) Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.
 ```shellscript
 git reset --hard <commit>
 ```
-52)To Fetch the remote’s copy of current branch and rebases it into the local copy. Uses git rebase instead of merge to integrate the branches.
+52) To Fetch the remote’s copy of current branch and rebases it into the local copy. Uses git rebase instead of merge to integrate the branches.
 ```shellscript
 git pull --rebase <remote>
 ```
