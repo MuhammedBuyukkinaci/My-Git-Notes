@@ -171,7 +171,7 @@ git clean -n
 ```shellscript
 git clean -f
 ```
-43) Rebase the current branch onto <base>. <base> can be a commit ID,branch name, a tag, or a relative reference to HEAD.
+43) Rebase the current branch onto base. base can be a commit ID,branch name, a tag, or a relative reference to HEAD.
 ```shellscript
 git rebase <base>
 ```
@@ -179,7 +179,7 @@ git rebase <base>
 ```shellscript
 git remote add origin https://github.com/user/repo.git
 ```
-45) Fetches a specific <branch>, from the repo. Leave off <branch>to fetch all remote refs.
+45) Fetches a specific branch, from the repo. Leave off <branch>to fetch all remote refs.
 ```shellscript
 git remote add origin https://github.com/user/repo.git
 ```
