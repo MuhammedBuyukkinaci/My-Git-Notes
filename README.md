@@ -17,11 +17,8 @@
 ![alt text](https://miro.medium.com/max/3834/1*g-iW9rUZVeHSdKNnVbAuQg.png)
 
 5) To see the properties of git configuration
-
 ```shellscript
-
 git config --list
-
 ```
 
 
