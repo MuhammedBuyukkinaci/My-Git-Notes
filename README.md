@@ -135,7 +135,7 @@ directory/
 ```
 34) Create .gitignore firstly while creating a project. If you didn't do this, clear cache by command below.
 ```shellscript
-git rm -r --cached
+git rm -r --cached .
 ```
 ![alt text](https://i2.wp.com/digitalvarys.com/wp-content/uploads/2019/06/GIT-Branchand-its-Operations.png?resize=1024%2C563&ssl=1)
 
