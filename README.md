@@ -111,9 +111,10 @@ git revert 7_DIGIT
 git revert 7_DIGIT
 ```
 
-29) While using ```git reset```, take care a lot.
-
-
+29) While using ```git reset```, take care a lot. To remove staged files from Staging Area(Not Working Directory)
+```shellscript
+git reset FILE_NAME
+```
 30) To roll back from only The Local Repository
 ```shellscript
 git reset --soft HASH_NUMBER
@@ -157,4 +158,28 @@ git checkout master
 39) While on master, merge different branches into master.
 ```shellscript
 git merge branch_name1 branch_name2
+```
+40) To clone a Remote Repository to The Local Repository
+```shellscript
+git clone REMOTE_REPO_NAME
+```
+41) To show which files to be removed from working directory
+```shellscript
+git clean -n
+```
+42) To clean out which files to be removed from working directory
+```shellscript
+git clean -f
+```
+43) Rebase the current branch onto <base>. <base> can be a commit ID,branch name, a tag, or a relative reference to HEAD.
+```shellscript
+git rebase <base>
+```
+44) To add a new remote to local repo
+```shellscript
+git remote add origin https://github.com/user/repo.git
+```
+45) Fetches a specific <branch>, from the repo. Leave off <branch>to fetch all remote refs.
+```shellscript
+git remote add origin https://github.com/user/repo.git
 ```
