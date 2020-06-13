@@ -136,6 +136,8 @@ directory/
 ```shellscript
 git rm -r --cached
 ```
+![alt text](https://i2.wp.com/digitalvarys.com/wp-content/uploads/2019/06/GIT-Branchand-its-Operations.png?resize=1024%2C563&ssl=1)
+
 35) To create a new branch
 ```shellscript
 git branch branch_name1
