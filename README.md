@@ -58,7 +58,9 @@ git add .
 ```shellscript
 git status -s
 ```
+
 16) While committing, messages can be copies of the results of 'git status'
+
 
 17) To roll back a change from Staging Area:
 ```shellscript
@@ -96,7 +98,9 @@ git checkout 7_DIGIT
 ```shellscript
 git checkout master
 ```
+
 26) Checkout can be used to go back to previous versions.
+
 
 27) To delete a commit and its effects
 ```shellscript
@@ -106,7 +110,9 @@ git revert 7_DIGIT
 ```shellscript
 git revert 7_DIGIT
 ```
+
 29) While using ```git reset```, take care a lot.
+
 
 30) To roll back from only The Local Repository
 ```shellscript
