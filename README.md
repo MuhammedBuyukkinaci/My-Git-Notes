@@ -232,3 +232,8 @@ git diff HEAD
 ```shellscript
 git diff --cached
 ```
+# Sources
+
+- https://www.youtube.com/watch?v=SX8bHqXt8ws
+- https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+
