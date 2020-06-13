@@ -126,4 +126,33 @@ git reset --mixed HASH_NUMBER
 ```shellscript
 git reset --hard HASH_NUMBER
 ```
-
+33) Put the names of files that you don't want to be tracked into .gitignore file. A sample .gitignore file was listed below.
+```
+log.txt
+directory/
+*.py
+```
+34) Create .gitignore firstly while creating a project. If you didn't do this, clear cache by command below.
+```shellscript
+git rm -r --cached
+```
+35) To create a new branch
+```shellscript
+git branch branch_name1
+```
+36) To list all branches in a project
+```shellscript
+git branch -a
+```
+37) To pass to a different branch
+```shellscript
+git checkout branch_name1
+```
+38) To pass back to master branch
+```shellscript
+git checkout master
+```
+39) While on master, merge different branches into master.
+```shellscript
+git merge branch_name1 branch_name2
+```
