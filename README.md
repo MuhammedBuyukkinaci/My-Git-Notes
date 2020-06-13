@@ -12,9 +12,16 @@
 
 - Enabling us to split our project into particular branches
 
-4)Illustration of Working directory, Staging Area, Local Repository, Remote Repository
+4) Illustration of Working directory, Staging Area, Local Repository, Remote Repository
 
 ![alt text](https://miro.medium.com/max/3834/1*g-iW9rUZVeHSdKNnVbAuQg.png)
 
+5) To see the properties of git configuration
+
+```shellscript
+
+git config --list
+
+```
 
 
