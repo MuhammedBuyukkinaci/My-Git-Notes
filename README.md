@@ -183,7 +183,7 @@ git remote add origin https://github.com/user/repo.git
 ```shellscript
 git fetch <remote> <branch>
 ```
-46) To fetch the specified remote’s copy of current branch and immediately merge it into the local copy.
+46) To fetch the specified remote’s copy of current branch and immediately merge it into the local copy. git pull = git fetch + git merge
 ```shellscript
 git pull <remote>
 ```
