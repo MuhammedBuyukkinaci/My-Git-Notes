@@ -179,7 +179,7 @@ git rebase <base>
 ```shellscript
 git remote add origin https://github.com/user/repo.git
 ```
-45) Fetches a specific branch, from the repo. Leave off branch to fetch all remote refs.
+45) To fetch a specific branch from the remote. Leave off branch to fetch all remote refs. It allows only copying, not merging
 ```shellscript
 git fetch <remote> <branch>
 ```
