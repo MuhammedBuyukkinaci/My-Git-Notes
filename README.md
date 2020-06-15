@@ -242,8 +242,11 @@ git branch -d branch_name1
 
 60) github.com/octocat/Spoon-Knife project can be used while forking a project. After forking a project and making changes, we should create a pull request. Our pull request is going to be evaluated by project owner or team leader.
 
+61) We can use GitHub to host our static websites. Make a repository named as GITHUB_USER_NAME.github.io .
+
 # Sources
 
 - https://www.youtube.com/watch?v=SX8bHqXt8ws
 - https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+
 
