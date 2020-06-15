@@ -232,6 +232,12 @@ git diff HEAD
 ```shellscript
 git diff --cached
 ```
+
+58) To delete a branch
+```shellscript
+git branch -d branch_name1
+```
+
 # Sources
 
 - https://www.youtube.com/watch?v=SX8bHqXt8ws
