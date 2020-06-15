@@ -244,6 +244,12 @@ git branch -d branch_name1
 
 61) We can use GitHub to host our static websites. Make a repository named as GITHUB_USER_NAME.github.io .
 
+62) To show which repos are available on remote
+
+```shellscript
+git remote -v
+```
+
 # Sources
 
 - https://www.youtube.com/watch?v=SX8bHqXt8ws
