@@ -238,6 +238,8 @@ git diff --cached
 git branch -d branch_name1
 ```
 
+59) To add a new developer to the existing project on GitHub, Settings --> Manage Access --> Invite a collaborator
+
 # Sources
 
 - https://www.youtube.com/watch?v=SX8bHqXt8ws
