@@ -159,7 +159,7 @@ git checkout master
 ```shellscript
 git merge branch_name1 branch_name2
 ```
-40) To clone a Remote Repository to The Local Repository
+40) To clone a Remote Repository to The Local Repository. While cloning, a default .git directory is created.
 ```shellscript
 git clone REMOTE_REPO_NAME
 ```
