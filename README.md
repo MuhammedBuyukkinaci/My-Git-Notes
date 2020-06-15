@@ -240,6 +240,8 @@ git branch -d branch_name1
 
 59) To add a new developer to the existing project on GitHub, Settings --> Manage Access --> Invite a collaborator
 
+60) github.com/octocat/Spoon-Knife project can be used while forking a project
+
 # Sources
 
 - https://www.youtube.com/watch?v=SX8bHqXt8ws
