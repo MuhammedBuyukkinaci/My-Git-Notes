@@ -22,11 +22,11 @@ git config --list
 ```
 6) To set a name to configuration name
 ```shellscript
-git config -- global user.name = 'Muhammed'
+git config --global user.name "Muhammed Buyukkinaci"
 ```
 7) To set an email to configuration email
 ```shellscript
-git config -- global user.name = 'muhammedbuyukkinaci@gmail.com'
+git config --global user.email 'your_email_address@gmail.com'
 ```
 8) To create a local repo
 ```shellscript
