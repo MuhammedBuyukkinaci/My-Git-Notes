@@ -256,3 +256,18 @@ git remote -v
 - https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 
 
+63) How to git restore a particular extension
+
+```
+git checkout -- "*.xml"
+```
+
+64) How to add a new remote repository to a local repository
+
+```shell
+#origin is the name of a remote repository in local computer.
+git remote add my_awesome_new_remote_repo git@github.com:MuhammedBuyukkinaci/My-Git-Notes.git
+git remote add origin git@github.com:MuhammedBuyukkinaci/My-Git-Notes.git
+```
+
+
