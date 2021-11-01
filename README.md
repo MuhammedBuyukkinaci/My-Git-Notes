@@ -270,4 +270,11 @@ git remote add my_awesome_new_remote_repo git@github.com:MuhammedBuyukkinaci/My-
 git remote add origin git@github.com:MuhammedBuyukkinaci/My-Git-Notes.git
 ```
 
+65) To remove a remote repository from a local repository
+
+```
+git remote remove NAME_OF_REMOTE_REPO_IN_LOCAL
+# Example:
+git remote remove origin
+```
 
