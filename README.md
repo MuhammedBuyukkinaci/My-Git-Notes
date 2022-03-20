@@ -337,5 +337,17 @@ import sys # go to commit 2
 
 77) A tag named release should be added to release branches
 
+### Pull Requests
+
+78) Pull Request is a feature of git hosting platforms (github, bitbucket, gitlab)
+
+79) Pull Request invites others(reviewers) to give feedback before merging changes in code.
+
+80) Pull Request is enabling us to improve an open source project on a hosting platform like github. This happens in the following way:
+
+Fork      --> Change (Improve) the forked repo --> Open a pull request to original repo from new
+the repo      on a new branch                      branch of forked repo to master branch of original repo
+
+81) Pull Requests are always based on branches not on individual commits.
 
 
