@@ -351,3 +351,33 @@ the repo      on a new branch                      branch of forked repo to mast
 81) Pull Requests are always based on branches not on individual commits.
 
 
+### Merge Conflicts
+
+82) `git merge`, `git rebase`, `git pull`, `git cherry-pick`, `git stash apply`, all of these may result to a merge conflict.
+
+83) Merging branches works effortlessly in most of the times because git is usually able to figure out what is going on.
+
+84) Contradictory changes like `same line changed by 2 different branches, a file modified on 1 branch and deleted in other etc.` may result in merge conflicts.
+
+85) You can't ignore merge conflict. You have to deal with before you can continue your work. Dealing with a merge conflict doesn't mean you have to resolve it; you can undo it and this is sometimes really helpful.
+
+```
+git merge --abort
+
+git rebase --abort
+```
+
+86) git is marking the promlematic ares via *>>>>>* or *<<<<<<<*. *======* is separating changes of different commits
+
+![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/004.png)
+
+87) The solution to merge conflicts is to clean up the file. GUI options like git-tower and Github Desktop are really helpful on solving merge conflicts. On the other hand, there are dedicated merge tools. For complicated conflicts,it is great to have  dedicated merge tool at hand. A merge conflict tool can be configured via `git config`.
+
+88) After dealing with merge conflict via GUI or manually or git merge tool, We have to commit this situation like any other ordinary change.
+
+
+
+
+
+
+
