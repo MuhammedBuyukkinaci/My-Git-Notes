@@ -280,10 +280,6 @@ git remote remove origin
 
 # Git For Professionals
 
-![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/001.jpeg)
-
-[Video Link](https://www.youtube.com/watch?v=Uszj_k0DGsg)
-
 ### Perferct Commit
 
 66) [git-tower.com](https://git-tower.com) is a GUI to improve git facilities.
