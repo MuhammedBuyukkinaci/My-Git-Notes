@@ -278,3 +278,64 @@ git remote remove NAME_OF_REMOTE_REPO_IN_LOCAL
 git remote remove origin
 ```
 
+# Git For Professionals
+
+![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/001.jpeg)
+
+[Video Link](https://www.youtube.com/watch?v=Uszj_k0DGsg)
+
+### Perferct Commit
+
+66) [git-tower.com](https://git-tower.com) is a GUI to improve git facilities.
+
+67) Git staging area is enabling us to make 2 different commits from a single file
+
+```file1.py
+
+import os # go to commit 1
+
+import sys # go to commit 2
+
+```
+
+68) Changes in a topic should belong to a single topic/issue.
+
+69) `git add -p index.html` is  chooging parts of a file to a commit, not a whole file. We are prompted to choose which parts to be committed thanks to `-p` flag.
+
+70) `git commit` has a subject and a body section. After putting changes to a staging area, type `git commit` and a window is prompted. The first line is commit subject that shouldn't exceed 80 characters.The second line is empty. The third line is the detailed explanation
+
+`
+### Branches
+
+71) 3 types of branches:
+ 
+- Mainline branches like main or master, long living
+- Integration branches like develop or staging, long living
+- Feature branches (refactoring, experiment, bugfix, release etc.), short running
+
+![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/001.jpeg)
+
+72) If you have staging, development, production environments, it is advised to mirror branches (main, develop etc.)
+
+73) Commits shouldn't be directly merged/rebased to integration and mainline branches. They should be committed on feature branches.
+
+74) Short lived branches are created for certain purposes like bugfix or refactoring or experiments or feature adding.
+
+75) Githubflow is advocating a simple approach. 1 long running branch + feature branches(feature, bugfix, refactoring).
+
+![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/002.jpeg)
+
+
+76) Gitflow is a more structured approach.
+
+- main: current production code
+- develop: feature branches start from develop branches and merged back on develop branch
+- feature: new attributes or bugfixes or refactoring are coded on feature branches.
+
+![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/003.jpeg)
+
+
+77) A tag named release should be added to release branches
+
+
+
