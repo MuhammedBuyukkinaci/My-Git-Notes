@@ -386,11 +386,20 @@ git rebase --abort
 
 91) Rebase isn't better or worse than merge. Rebase makes the project history to look like a straight line without any sign that it had been split into multiple branches at some point.
 
-92) An example usage of git rebase is below
+92) An example usage of git rebase and what is going on behind the scenes are below.
 
 ```
 git rebase branch_Name_to_integrate
 ```
+
+![008](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/008.png)
+
+![009](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/009.png)
+
+![010](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/010.png)
+
+![011](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/011.png)
+
 
 93) Rebase rewrites commit history.
 
