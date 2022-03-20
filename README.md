@@ -309,7 +309,7 @@ import sys # go to commit 2
 - Integration branches like develop or staging, long living
 - Feature branches (refactoring, experiment, bugfix, release etc.), short running
 
-![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/001.jpeg)
+![001](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/001.jpeg)
 
 72) If you have staging, development, production environments, it is advised to mirror branches (main, develop etc.)
 
@@ -319,7 +319,7 @@ import sys # go to commit 2
 
 75) Githubflow is advocating a simple approach. 1 long running branch + feature branches(feature, bugfix, refactoring).
 
-![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/002.jpeg)
+![002](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/002.jpeg)
 
 
 76) Gitflow is a more structured approach.
@@ -328,7 +328,7 @@ import sys # go to commit 2
 - develop: feature branches start from develop branches and merged back on develop branch
 - feature: new attributes or bugfixes or refactoring are coded on feature branches.
 
-![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/003.jpeg)
+![003](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/003.jpeg)
 
 
 77) A tag named release should be added to release branches
@@ -365,13 +365,36 @@ git rebase --abort
 
 86) git is marking the promlematic ares via *>>>>>* or *<<<<<<<*. *======* is separating changes of different commits
 
-![Video Link](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/004.png)
+![004](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/004.png)
 
 87) The solution to merge conflicts is to clean up the file. GUI options like git-tower and Github Desktop are really helpful on solving merge conflicts. On the other hand, there are dedicated merge tools. For complicated conflicts,it is great to have  dedicated merge tool at hand. A merge conflict tool can be configured via `git config`.
 
 88) After dealing with merge conflict via GUI or manually or git merge tool, We have to commit this situation like any other ordinary change.
 
+### Merge vs Rebase
 
+89) The simple scenario for merge is a fast-forward merge.
+
+![005](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/005.png)
+
+90) Normally, a commit is created by a human being. It is made after related changes. However, a merge commit is a little bit different. It isn't created by developers, it is created by git gui automatically. Its purpose is to connect two branches, just like a knot.
+
+![006](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/006.png)
+
+![007](https://github.com/MuhammedBuyukkinaci/My-Git-Notes/blob/master/images/007.png)
+
+
+91) Rebase isn't better or worse than merge. Rebase makes the project history to look like a straight line without any sign that it had been split into multiple branches at some point.
+
+92) An example usage of git rebase is below
+
+```
+git rebase branch_Name_to_integrate
+```
+
+93) Rebase rewrites commit history.
+
+94) Rebase should be used for cleaning up the local commit history. Don't use it on a remote repo.
 
 
 
