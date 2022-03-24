@@ -404,6 +404,7 @@ git rebase branch_Name_to_integrate
 
 
 93) Rebase rewrites commit history.
+<<<<<<< HEAD
 
 94) Rebase should be used for cleaning up the local commit history. Don't use it on a remote repo.
 
@@ -439,13 +440,3 @@ git rebase -i HEAD~4
 # pick 7_DIGIT_2       ------>       pick 7_DIGIT_2
 # pick 7_DIGIT_1                     pick 7_DIGIT_1
 ```
-
-
-
-
-
-
-
-
-
-
