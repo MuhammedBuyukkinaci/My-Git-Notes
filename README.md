@@ -407,6 +407,44 @@ git rebase branch_Name_to_integrate
 
 94) Rebase should be used for cleaning up the local commit history. Don't use it on a remote repo.
 
+# Advanced Git Tutorial
+
+[Video link](https://www.youtube.com/watch?v=qsTthZi23VE)
+
+### Interactive Rebase
+
+95) Interactive Rebase allows us to manipulate commit history. Manipulate means change message, delete commit, reorder commits, combine multiple commits, edit on existing commis, split an existing commit into multiple commits.
+
+96) Don't use interactive rebase on commits that were published on a remote repository. Interactive rebase should be used in cleaning up local commit history before mergings it into a shared team branch.
+
+97) An example usage is below:
+
+```
+git rebase -i HEAD~3
+```
+
+98) If the latest commit was required to be changed, use `git commit --amend`. For the other previous commits, use interactive rebase.
+
+99) First enter `git rebase -i HEAD~3`. It will prompt a new window asking that what kind of change (keyword) I want to make. Replace *pick* with *reword*. A new prompt will pop up. Rewrite commit message and see changes.
+
+100) Squash is combining 2 commits by creating a new commit
+
+```
+git rebase -i HEAD~4
+
+# To combine 7_DIGIT_3 & 7_DIGIT_4, write squash before 7_DIGIT_3. It will merge 7_DIGIT_3 and its previous commit(7_DIGIT_4)
+
+# pick 7_DIGIT_4                     pick 7_DIGIT_4
+# pick 7_DIGIT_3       ------>       squash 7_DIGIT_3
+# pick 7_DIGIT_2       ------>       pick 7_DIGIT_2
+# pick 7_DIGIT_1                     pick 7_DIGIT_1
+```
+
+
+
+
+
+
 
 
 
