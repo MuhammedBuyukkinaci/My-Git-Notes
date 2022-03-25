@@ -543,6 +543,65 @@ git log feature/login..master
 
 119) grep can use regular expressions. Therefore, there is no limit to our creativity while filtering commits.
 
+# Git and Github For Beginners
+
+[Video Link](https://www.youtube.com/watch?v=RGOj5yH7evk)
+
+120) An tutorial for setting up ssh keys is [SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+
+121) -u flag in git push is used to set upstream. After setting the upstream via `git push -u origin master`, we don't have to type `git push origin master`. `git push` is enough.
+
+122) To show differences between a master and feature branch
+
+```
+git checkout master
+git diff FEATURE_BRANCH_NAME
+```
+
+123) It is recommended to create a PR (pull request) and let other developers review it rather than merging feature branch on top of master. After pull request is approved, pull changes via `git pull`
+
+124) To create a branch and switch to that branch, there are 2 ways to do this:
+
+```
+# 1)
+git branch feature_branch
+git checkout feature_branch
+# 2)
+git checkout -b feature_branch
+
+```
+
+125) stashing is a way to stash your changes somewhere and you can retrieve them later. It isn't making any commits. It is a temporary placeholder for changes. `git stash` is useful especially if you don't want to lose your code and you want to switch between branches.
+
+```
+# Store changes in stashing
+git stash
+# Revert changes after switching between branches
+git stash apply
+```
+
+126) HEAD is a pointer to last commit.
+
+127) To unstage a file from staging area
+
+```
+git reset filename.py
+```
+
+128) To undo latest commit
+
+```
+git reset HEAD~1
+```
+
+129) To get rid of all of the changes after a certain point. HEAD is now pointing to HASH_ID.
+
+```
+git reset --hard HASH_ID
+```
+
+
 
 
 
