@@ -440,3 +440,114 @@ git rebase -i HEAD~4
 # pick 7_DIGIT_2       ------>       pick 7_DIGIT_2
 # pick 7_DIGIT_1                     pick 7_DIGIT_1
 ```
+
+### Cherry Picking
+
+101) cherry-pick allows us to pick individual commits to be integrated. It is on the level of commit, not on branches.
+
+102) The main integration level should be branch level. `git merge` and `git rebase` do what we want in most cases. Cherry picking isn't a replacement of git merge and git rebase.
+
+103) Committing on a master branch directly is a practical use case for cherry picking. I n this case, it is necessary to move commit from master branch to feature branch.
+
+104) A commit is made intp master wrongly. We want to move it into feature branch.
+
+```
+git checkout feature branch
+
+git cherry-pick 7_DIGIT
+
+git checkout master
+
+# delete wrong commit from master
+git reset --hard HEAD~1
+
+git reset --hard 7_DIGIT
+```
+
+### Reflog
+
+105) Reflog can be regarded as git's diary. It is a perfect choice if things go wrong.
+
+106) For instance, we deleted 2 recent commits via `git reset --hard` wrongly. However, we noticed this is a bad idea. Reflog comes in play in this situation. We wat to get back to the situation before 2 commits were deleted.
+
+```
+git reflog
+
+git reset 7_DIGIT_ON_REFLOG
+```
+
+107) To start a new branch from a particular commit
+
+git branch NEW_BRANCH 7_DIGIT
+
+108) Reflog comes in handy when a branch is deleted wrongly.
+
+```
+git reflog
+# find commit hash
+git branch NEW_BRANCH 7_DIGIT
+```
+
+### Submodules
+
+109) A submodule is a standard git repository. The ony speciality is that it is nested inside a parent repository.
+
+110) Submodule property of git comes in handy especially if we want to include a 3rd party library or something like that. To use submodule of git, create a folder in the main repo and this is submodule.
+
+```
+mkdir lib
+cd lib
+git submodule add REMOTE_URL_OF_REPO
+```
+
+111) The actual content of submodule isn't stored in our parent repo.
+
+112) After creating a submodule, a *.gitmodule* file is created in parent repo directly. It is also added to .git/config file.
+
+113) git also stores a copy of submodules under .git/modules.
+
+114) It is recommended to use Git GUI's like tower and Github Desktop if you are dealing with git submodules.
+
+115) Git regards adding a submodule as a modification and that change ought to be committed.
+
+116) When a repo is cloned from Github, it only has configurations of its submodules, not the content of its submodules. If you want to download submodule contents of repo, run the following after cloning.
+
+```
+git clone URL_OF_REPO
+git submodule update --init --recursive
+
+# or directly
+git clone --recursive-submodules URL_OF_REPO
+```
+
+117) Submodule repositories are always checked out on specific commits , not a branch. Content of a branch can change over time when near commits arrive. For submodule, we always want a specific version which was checked out.
+
+### Search & Find
+
+118) We can filter commit history by date, message, author, file, branch.
+
+```
+git log --after="2021-7-1" --before="2021-7-5"
+
+git log --grep="refactor"
+
+git log --author="Muhammed"
+
+# Not to confuse filename with branch name
+git log -- README.md
+
+# To show commits in master and not in feature/login
+
+git log feature/login..master
+```
+
+119) grep can use regular expressions. Therefore, there is no limit to our creativity while filtering commits.
+
+
+
+
+
+
+
+
+
