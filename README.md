@@ -564,6 +564,10 @@ git log -- README.md
 # To show commits in master and not in feature/login
 
 git log feature/login..master
+
+# To show commits in local master and not in remote master
+
+git log origin/master..master
 ```
 
 119) grep can use regular expressions. Therefore, there is no limit to our creativity while filtering commits.
@@ -606,7 +610,7 @@ git stash
 git stash apply
 ```
 
-126) HEAD is a pointer to last commit.
+126) HEAD is a pointer to last commit. HEAD is the currently active or checked out branch.
 
 127) To unstage a file from staging area
 
@@ -659,6 +663,54 @@ git reset --mixed 7_DIGIT
 ```
 git restore --source 7_DIGIT filename
 ```
+
+# Branches
+
+[Video Link](https://www.youtube.com/watch?v=e2IbNHi4uCI)
+
+134) `git switch BRANCH_NAME` is an alternative to `git checkout BRANCH_NAME` in order to switch between branches.
+
+135) To rename a branch(while checked out the branch, which is HEAD)
+
+```
+git branch -m NEW_BRANCH_NAME
+```
+
+136) To rename a branch which isn't checked out(non HEAD)
+
+```
+git branch -m PREVIOUS_BRANCH_NAME NEW_BRANCH_NAME
+```
+
+137) Renaming a remote branch isn't possible. Instead, delete the former branch from remote and push the newly renamed branch to remote repo.
+
+```
+# Delete the old branch from remote
+git push origin --delete OLD_BRANCH_NAME
+
+git push -u origin NEW_BRANCH_NAME
+```
+
+138) Tracking connection is used to be able to use `git pull` or `git push` directly. To establish a tracking connection
+
+```
+git branch --track LOCAL_BRANCH_NAME REMOTE_BRANCH_NAME
+# or
+git checkout --track REMOTE_BRANCH_NAME
+
+```
+
+139) Tracking connection is useful in whether to notice remote and local branches diverge or not.
+
+140) To delete a branch from remote
+
+```
+git push origin --delete BRANCH_BAME_TO_DELETE_ON_REMOTE
+```
+
+141)
+
+
 
 
 
