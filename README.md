@@ -414,19 +414,26 @@ git rebase branch_Name_to_integrate
 
 ### Interactive Rebase
 
-95) Interactive Rebase allows us to manipulate commit history. Manipulate means change message, delete commit, reorder commits, combine multiple commits, edit on existing commis, split an existing commit into multiple commits.
+95) Interactive Rebase allows us to manipulate commit history. Manipulate means change message, delete commit, reorder commits, combine multiple commits, edit on existing commis, split an existing commit into multiple commits. It is a swiss army knife which has several options together. However, it is a knife and be careful while using it.
 
 96) Don't use interactive rebase on commits that were published on a remote repository. Interactive rebase should be used in cleaning up local commit history before mergings it into a shared team branch.
 
-97) An example usage is below:
+97) An example usage is below(commits are in reverse order, be careful):
 
 ```
 git rebase -i HEAD~3
 ```
 
-98) If the latest commit was required to be changed, use `git commit --amend`. For the other previous commits, use interactive rebase.
+98) If the latest commit was required to be changed, use `git commit --amend`. For the other previous commits, use interactive rebase. Don't change of commit history of things that you already pushed into a remote repository. When *--amend * comment is used, it creates a new commit hash (7_DIGIT).
 
-99) First enter `git rebase -i HEAD~3`. It will prompt a new window asking that what kind of change (keyword) I want to make. Replace *pick* with *reword*. A new prompt will pop up. Rewrite commit message and see changes.
+```
+# To change commit message of latest commit
+git commit --amend -m "new commit message"
+```
+
+99) First enter `git rebase -i HEAD~3`. It will prompt a new window asking that what kind of change (keyword) I want to make. Replace **pick** with **reword**. A new prompt will pop up. Rewrite commit message and see changes.
+
+99.5) **drop** is the action keyword to delete the commit.
 
 100) Squash is combining 2 commits by creating a new commit
 
@@ -440,6 +447,24 @@ git rebase -i HEAD~4
 # pick 7_DIGIT_2       ------>       pick 7_DIGIT_2
 # pick 7_DIGIT_1                     pick 7_DIGIT_1
 ```
+
+```
+# To add a new file to a previous commit
+
+git add filename
+
+git commit --fixup 7_DIGIT_PREVIOUS_HASH
+
+# fixup keyword combines the line above like squash
+git rebase -i HEAD~4 --autosquash
+
+```
+
+```
+# Split an existing command
+```
+
+100.5) Don't use interactive rebase for latest commit manipulation. Use it for more previous commands(HEAD~3 etc.).
 
 ### Cherry Picking
 
@@ -595,11 +620,51 @@ git reset filename.py
 git reset HEAD~1
 ```
 
-129) To get rid of all of the changes after a certain point. HEAD is now pointing to HASH_ID.
+129) To get rid of all of the changes after a certain point (C1-C2-C3-C4) (C4 is head and we want to move back to C2). HEAD is now pointing to HASH_ID.
 
 ```
-git reset --hard HASH_ID
+git reset --hard HASH_ID_OF_C2
 ```
+
+# How to Undo Mistakes With Git Using the Command Line
+
+[Video Link](https://www.youtube.com/watch?v=lX9hsdsAeTk)
+
+130) To restore some chunks of a file which is staged(it will prompt up question about hwether to discard or not)
+
+```
+git restore -p filename
+```
+
+131) To revert a commit which is in the middle (C1 - C2 - C3 - C4) (in this case it is C2), which means invalidating its effects
+
+```
+git revert HASH_OF_UNWANTED_COMMIT
+```
+
+132) For `git reset`, **--hard** and **--mixed** are most frequently used options. If you want to have a clean working directory, **--hard** is handy. **--mixed** is moving back a previous commit but it has undone changes in the working directory.
+
+```
+# Hard reset, cleans latest commits and latest commits disappear
+git reset --hard 7_DIGIT
+# To Roll back to one previous commit
+git reset --hard HEAD~1
+
+# Mixed reset, cleans latest commits latest commits appear in working directories as unstaged.
+git reset --mixed 7_DIGIT
+```
+
+133) To revert a file to a previous version in a previous commit
+
+```
+git restore --source 7_DIGIT filename
+```
+
+
+
+
+
+
 
 
 
