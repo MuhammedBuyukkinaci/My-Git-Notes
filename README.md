@@ -708,7 +708,9 @@ git checkout --track REMOTE_BRANCH_NAME
 git push origin --delete BRANCH_BAME_TO_DELETE_ON_REMOTE
 ```
 
-141)
+# Others
+
+141) Git may not recognizes changes in file names. For instance, if we renamed a file from File01.py to file01.py, git may not detect the change in uppercase/lowercase. In this case, changing it to file_01.py is going to be detected.
 
 
 
