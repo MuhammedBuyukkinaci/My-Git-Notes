@@ -712,6 +712,15 @@ git push origin --delete BRANCH_BAME_TO_DELETE_ON_REMOTE
 
 141) Git may not recognizes changes in file names. For instance, if we renamed a file from File01.py to file01.py, git may not detect the change in uppercase/lowercase. In this case, changing it to file_01.py is going to be detected.
 
+142) In order to prevent git commands from behaving like less or cat commands, no pager can be useful.
+
+```runall.sh
+# git branch
+git config --global pager.branch false
+# git log
+git config --global pager.log false
+```
+
 
 
 
