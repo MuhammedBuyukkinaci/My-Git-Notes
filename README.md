@@ -723,7 +723,11 @@ git config --global pager.branch false
 git config --global pager.log false
 ```
 
+143) To change editor option to vim instead of nano in git
 
+```run.sh
+git config --global core.editor "vim"
+```
 
 
 
