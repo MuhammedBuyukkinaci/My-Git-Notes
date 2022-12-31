@@ -729,12 +729,15 @@ git config --global pager.log false
 git config --global core.editor "vim"
 ```
 
+144) Let's assume we are working on a feature branch based on master and remote master has changed. We should always make `git pull` operation and resolve merge conflicts before pushing into remote.
 
+145) Git log 2 dots .. and 3 dots difference
 
+![git_log](./images/012.png)
 
+146) Git diff 2 dots .. and 3 dots difference
 
-
-
+![git_log](./images/013.png)
 
 
 
