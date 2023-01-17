@@ -80,7 +80,11 @@ git log
 ```
 21) To see summary of commits
 ```shellscript
-git log --online
+# A classical git log oneline
+git log --oneline
+# Detailed version
+git log --oneline --decorate --graph
+
 ```
 22) To see only latest 2 commits
 ```shellscript
@@ -739,7 +743,21 @@ git config --global core.editor "vim"
 
 ![git_log](./images/013.png)
 
+147) Git tag is a pointer to a particular commit. It is permanent. They shouldn't be modified. There are 2 types of git tag. Lightweight and Heavyweight. It is used in releases. Lightweight tag is preferrable. Heavyweight tag is containing both tag message and commit message.
 
+```run.sh
+## Lightweight  Tag
+# To assign a tag to current commit
+git tag TAG_TO_ASSIGN
+
+# To assign a tag to a previous commit
+git tag TAG_TO_ASSIGN 7_DIGIT
+
+## Heavyweight Tag
+git tag TAG_TO_ASSIGN 7_DIGIT -m "message"
+
+
+```
 
 
 
