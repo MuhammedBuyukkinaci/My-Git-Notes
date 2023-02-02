@@ -759,6 +759,9 @@ git tag TAG_TO_ASSIGN 7_DIGIT -m "message"
 
 ```
 
+148) `git checkout --orphan BRANCH_NAME_HERE` is a way to clean up the commit history in **BRANCH_NAME_HERE**. We are using it for documentation pages or switching to public/private repos etc. We can use it to hide the previous history of an open source project. It can be used via `git checkout 7_DIGIT --orphan BRANCH_NAME_HERE` to start from an existing commit.
+
+
 
 
 
