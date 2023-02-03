@@ -40,6 +40,13 @@ git status
 ```shellscript
 git add .
 ```
+
+- To add all modified files to git
+
+```t.sh
+git add -u
+```
+
 11) To transfer staged changes to The local repository
 ```shellscript
 git commit -m "Transfering to the local repository"
