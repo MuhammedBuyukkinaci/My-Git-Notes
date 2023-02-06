@@ -151,23 +151,28 @@ git rm -r --cached .
 ![alt text](https://i2.wp.com/digitalvarys.com/wp-content/uploads/2019/06/GIT-Branchand-its-Operations.png?resize=1024%2C563&ssl=1)
 
 35) To create a new branch
-```shellscript
+```t.sh
 git branch branch_name1
 ```
 36) To list all branches in a project
-```shellscript
+```t.sh
+# To list all
 git branch -a
+# To list remote branches on client side
+git branch -r
+# To remove a tracked branch name
+git branch -r -d REMOTE_BRANCH_TO_DELETE
 ```
 37) To pass to a different branch
-```shellscript
+```t.sh
 git checkout branch_name1
 ```
 38) To pass back to master branch
-```shellscript
+```t.sh
 git checkout master
 ```
 39) While on master, merge different branches into master.
-```shellscript
+```t.sh
 git merge branch_name1 branch_name2
 ```
 40) To clone a Remote Repository to The Local Repository. While cloning, a default .git directory is created.
