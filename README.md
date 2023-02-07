@@ -79,7 +79,14 @@ git restore filename
 ```
 19) To see latest commit
 ```shellscript
-git show
+# To see what happened in the last commit
+git show HEAD
+# To see in the HEAD-1 commit
+git show HEAD^1
+# To see what is committed in a hash
+git show 7_DIGIT
+# To see what happened in a tag
+git show TAG_hERE
 ```
 20) To see all commits in The Local Repository
 ```shellscript
