@@ -187,7 +187,7 @@ git merge branch_name1 branch_name2
 git clone REMOTE_REPO_URL
 
 git clone REMOTE_REPO_URL new_folder_name
-
+# shallow clone
 git clone https://github.com/google-coral/tflite --depth 1
 ```
 41) To show which files to be removed from working directory
