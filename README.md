@@ -768,7 +768,7 @@ git config --global core.editor "vim"
 
 147) Git tag is a pointer to a particular commit. It is permanent. They shouldn't be modified. There are 2 types of git tag. Lightweight and Heavyweight. It is used in releases. Lightweight tag is preferrable. Heavyweight tag is containing both tag message and commit message.
 
-```run.sh
+```bash
 ## Lightweight  Tag
 # To assign a tag to current commit
 git tag TAG_TO_ASSIGN
@@ -779,6 +779,8 @@ git tag TAG_TO_ASSIGN 7_DIGIT
 ## Heavyweight Tag
 git tag TAG_TO_ASSIGN 7_DIGIT -m "message"
 
+# In order to push a commit with tags
+git push origin master --tags
 
 ```
 
